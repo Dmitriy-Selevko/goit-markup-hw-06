@@ -671,4 +671,25 @@ h4 {
   position: absolute;
   top: 8px;
   right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-button-close:hover .button-close-icon,
+.modal-button-close:focus .button-close-icon {
+  fill: var(--accent-color);
+}
+
+.button-close-icon {
+  width: 11px;
+  height: 11px;
+  fill: var(--title-text-color);
 }
