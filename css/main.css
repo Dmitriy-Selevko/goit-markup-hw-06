@@ -813,9 +813,6 @@ textarea {
 
 .form-field.policy {
   margin-top: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .policy-checkbox {
@@ -829,23 +826,27 @@ textarea {
   overflow: hidden;
 }
 
-.policy-icon {
+.policy-icon::before {
+  content: "";
   display: inline-block;
   width: 15px;
   height: 15px;
 
   margin-left: 6px;
-  margin-right: 6px;
+  margin-right: 3px;
 
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  vertical-align: middle;
 }
 
-.policy-checkbox:checked + .policy-icon {
-  border-color: transparent;
+.policy-checkbox:checked ~ span::before {
   background-color: var(--accent-color);
+  border-color: var(--accent-color);
+
   background-image: url("../images/icons/policy.svg");
   background-size: contain;
   background-origin: border-box;
