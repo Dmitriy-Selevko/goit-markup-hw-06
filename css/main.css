@@ -209,7 +209,7 @@ h4 {
   margin-bottom: 30px;
 }
 
-.hero-button {
+.button {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 
@@ -456,11 +456,6 @@ h4 {
   font-size: 16px;
   line-height: 1.62;
 
-  display: inline-block;
-  align-items: center;
-  text-align: center;
-  text-decoration: none;
-
   padding: 6px 22px;
   border-radius: 4px;
   border: 1px solid transparent;
@@ -559,7 +554,6 @@ h4 {
 .footer {
   background-color: var(--footer-background-color);
 
-  padding-top: 60px;
   padding-bottom: 60px;
 }
 
@@ -601,8 +595,15 @@ h4 {
   margin-left: 80px;
 }
 
-.footer-links-title {
+.footer-links-title,
+.subscribe-title {
   color: var(--primary-white-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
   margin-top: 72px;
   margin-bottom: 20px;
 }
@@ -618,6 +619,35 @@ h4 {
 
 .footer-links .social-icon {
   fill: var(--primary-white-color);
+}
+
+.subscribe-form {
+  margin-left: auto;
+}
+
+.subscribe-form-input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: var(--footer-background-color);
+
+  padding: 15px 16px;
+}
+
+.subscribe-form button {
+  padding: 10px 62px 10px 29px;
+  position: relative;
+
+  margin-left: 12px;
+}
+
+.subscribe-form-icon {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
 }
 
 .backdrop {
@@ -764,11 +794,77 @@ h4 {
   padding: 12px 16px;
   width: 448px;
   height: 120px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
 }
 
 textarea {
   resize: none;
+}
+
+.form-field.policy {
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.policy-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.policy-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+
+  margin-left: 6px;
+  margin-right: 6px;
+
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy-checkbox:checked + .policy-icon {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-image: url("../images/icons/policy.svg");
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.policy-text {
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  margin-right: 3px;
+}
+
+.policy a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.form .button:hover {
+  background-color: #188ce8;
 }
